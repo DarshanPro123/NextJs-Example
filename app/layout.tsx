@@ -30,9 +30,6 @@ export default function RootLayout({
       >
         <div className="text-center p-8 flex gap-6 border items-center justify-center ">
           {" "}
-          <h4 className="text-4xl text-center uppercase text-green-500">
-            My Next.js App
-          </h4>
           <a href="/" className="text-green-500 hover:underline">
             Home
           </a>

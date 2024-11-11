@@ -1,12 +1,26 @@
-import Link from "next/link";
 import React from "react";
 
-const User = () => {
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const User: React.FC = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users: User[] = await response.json();
+
   return (
-    <div>
-      <h1 className="text-4xl text-center uppercase text-orange-500">
-        my user
-      </h1>
+    <div className="flex flex-wrap gap-4">
+      {users.map((user) => {
+        return (
+          <div className=" ">
+            <div className="w-[400px] bg-gray-200 p-4">{user.id}</div>
+            <div className="w-[400px] bg-gray-200 p-4">{user.name}</div>
+            <div className="w-[400px] bg-gray-200 p-4">{user.email}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };
