@@ -3,7 +3,7 @@ import React from "react";
 const NewUserPage = () => {
   return (
     <div>
-      <h1 className="text-4xl text-center uppercase text-green-500">
+      <h1 className="text-4xl text-center uppercase text-orange-500">
         My New USer
       </h1>
     </div>
